@@ -69,30 +69,6 @@
             </plugin>
         </plugins>
     </build>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>vast.deploy</id>
-            <name>Vast.com Internal Release Repository</name>
-            <url>https://maven.vast.com/archiva/repository/internal</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>vast.snapshots</id>
-            <name>Vast.com Internal Snapshot Repository</name>
-            <url>https://maven.vast.com/archiva/repository/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
     <repositories>
         <repository>
             <id>repository.jboss.org</id>
