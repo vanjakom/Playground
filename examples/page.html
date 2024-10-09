@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>          
+		<script type="text/javascript">
+			function request(url) {
+				$("p:first").text("loading: " + url);
+				$.get(url, function(data) {
+       				$("p:last").text(data);
+					$("p:first").text("loaded");
+    			});
+			}
+			function requestJSON(url) {
+				$("p:first").text("loading: " + url);
+				$.getJSON(url, function(data) {
+       				$("p:first").text("response accepted");
+       				$("p:last").text(data.message);
+					$("p:first").text("loaded");
+    			});
+				$("p:first").text("async sent: " + url);    			
+			}
+			$(document).ready(request('test'));
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="button" value="Click me!" onclick="requestJSON('status')" />
+		</form>
+		<p>Status</p>
+		<p>Not loaded yet</p>
+	</body>
+</html>
